@@ -213,12 +213,12 @@ main img{
   </head>
   <body>
 	  <nav class="navbar">
-		  <a class="title">Munib</a>
+		  <a class="title" href="https://munib.netlify.app">Munib</a>
 
 		  <div>
-			  <a>About</a>
-			  <a>Contact</a>
-			  <a>Portfolio</a>
+			  <a href="https://munib.netlify.app">About</a>
+			  <a href="https://munib.netlify.app">Portfolio</a>
+			  <button class="falsebutton" onClick={contact}>Contact</button>
 		  </div>
 	  </nav>
 	  <main>
@@ -272,6 +272,10 @@ window.addEventListener("scroll",()=>{
         
     }
 })
+
+function scrollDown() {
+  window.scroll(0, window.scrollY + 100);
+}
 	</script>
   </body>
 </html>
