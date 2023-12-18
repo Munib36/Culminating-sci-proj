@@ -119,6 +119,21 @@ main img{
     border-right: 0px solid transparent;
     border-top: 100px solid var(--color);
 }
+	    #circle{
+    position: inherit;
+
+
+    transform: translateX(-50%);
+    top: -190px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+
+    fill: var(--blue);
+
+    opacity: 1;
+}
 
     </style>
   </head>
@@ -128,7 +143,9 @@ main img{
 
 	  
 	<div class="page">
-        
+        <svg id="circle" class="svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z"/>
+        </svg>
              <div id="triangle"></div>
 
         <h1>Welcome <br> flashlight</h1>
@@ -139,6 +156,31 @@ main img{
         
     </div>
 	  
-	<script src="index.js"></script>
+	<script>
+		let opacity = 1;
+let y = window.pageYOffset;
+let circle = document.getElementById("circle")
+let triangle = document.getElementById("triangle")
+
+if(y > 400){
+    opacity = 0;
+    circle.style.opacity = opacity;
+}else{
+    opacity = 1 - (y/400);
+    circle.style.opacity = opacity;
+}
+
+window.addEventListener("scroll",()=>{
+    y = window.pageYOffset;
+    if(y > 400){
+        opacity = 0;
+        circle.style.opacity = opacity;
+    }else{
+        opacity = 1 - (y/400);
+        circle.style.opacity = opacity;
+        
+    }
+})
+	</script>
   </body>
 </html>
