@@ -95,6 +95,48 @@ nav div a:hover{
 nav div a:hover:after{
 	width: 100%;
 }
+	    nav div a{
+	color: rgb(180, 180, 180);
+	padding: 0px 10px;
+}
+nav div a:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+
+
+
+nav div button{
+	color: rgb(180, 180, 180);
+	padding: 0px 10px;
+	border: none;
+}
+nav div button:active{
+	transform: 0;
+}
+nav div button:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+nav div button:hover{
+	color: white;
+	cursor: pointer;
+}
+nav div button:hover:after{
+	width: 100%;
+}
 /*& Background picture */
 main{
     width: 100%;
@@ -236,8 +278,10 @@ main img{
 	<hr style="width: 90%; align-self: center;">
 	<img style="margin-top: 10px;" src="./circuit.jpg"/>
 	<p>invented by David Misell in 1898</p>
+	<h2>flashlight Components</h2>
 	<ul>
-		<li></li>
+		<li>Switch: controls when electricity flows</li>
+		<li>Bulb: converts electrical energy into light</li>
 		<li></li>
 	</ul>
 
