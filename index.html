@@ -43,6 +43,7 @@ nav{
 nav > .title{
 	font-size: 18px;
 	padding: 0px 10px;
+	font-weight: bold;
 }
 .title:after{
 	content: "";
@@ -67,7 +68,22 @@ nav div a{
 	color: rgb(220, 220, 220);
 	padding: 0px 10px;
 }
-
+nav div a:after{
+	content: "";
+	position: absolute;
+	background-color: var(--color);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+nav div a: hover{
+	color: white;
+}
+nav div a:hover:after{
+	width: 100%;
+}
 /*& Background picture */
 main{
     width: 100%;
